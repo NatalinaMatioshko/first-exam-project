@@ -9,6 +9,7 @@
    Визначила підхід - desktop-first
    Визначила секції, заголовки, картинки
    Проаналізувала респонсивні картинки
+   Визначила головні змінні
 
 3. Download and set fonts
    a. Знайшла потрібні шрифти в інтернеті
@@ -26,6 +27,10 @@
 # Start
 
 1. Create project structure
+
+2. Create html structure
    Створила секції
    Додала відео на сторінку
-2. Create html structure
+   Додала розмітку
+
+3. Add styles

@@ -15,43 +15,45 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="logo">
-          <a class="logo__link link" href="./index.html">
-            <svg class="logo__icon icon">
-              <use href="./assets/img/icons/sprite.svg#logo"></use>
-            </svg>
-          </a>
+        <div class="header_cont">
+          <div class="logo">
+            <a class="logo__link link" href="./index.html">
+              <svg class="logo__icon icon" width="108" height="32">
+                <use href="./assets/img/icons/sprite.svg#logo"></use>
+              </svg>
+            </a>
+          </div>
+          <nav class="nav">
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Home</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">About</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Products</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Use Cases</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Pricing</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Resources</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="nav">
-          <ul menu>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Home</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">About</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Products</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Use Cases</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Pricing</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Resources</a>
-            </li>
-          </ul>
-        </nav>
       </div>
     </header>
 
     <main class="main">
       <!-- =================HERO======================== -->
       <section class="section section_1">
-        <div class="container">
-          <h1 class="title-title_1">
+        <div class="container hero_cont">
+          <h1 class="title title_1">
             A peer-to-peer stablecoin clearinghouse for the new economy
           </h1>
           <p class="text">
@@ -116,7 +118,7 @@
         </div>
       </section>
       <!-- =================BENEFITS======================== -->
-      <section class="section section_3">
+      <section class="section section_3 padding">
         <div class="container">
           <div class="wrapper">
             <h2 class="title title_2">
@@ -153,7 +155,7 @@
         </div>
       </section>
       <!-- =================QUOTE======================== -->
-      <section class="section section_4">
+      <section class="section section_4 padding">
         <div class="container">
           <p class="quote_text">
             Solis Group serves as a liquidity nexus that gives stablecoin
@@ -163,7 +165,7 @@
         </div>
       </section>
       <!-- =================VIDEO======================== -->
-      <section class="section section_5">
+      <section class="section section_5 padding">
         <div class="container">
           <video
             class="video"
@@ -185,7 +187,7 @@
         </div>
       </section>
       <!-- =================PROMISES======================== -->
-      <section class="section section_6">
+      <section class="section section_6 padding">
         <div class="container">
           <picture class="img promis_img">
             <source
@@ -277,7 +279,7 @@
       <section class="section section_8">
         <div class="container">
           <div>
-            <h2 class="title-title_2">Contact our sales team</h2>
+            <h2 class="title title_2">Contact our sales team</h2>
             <p class="text">
               Our team is happy to answer your sales questions.Fill out the form
               and we’ll be in touch as soon as possible.
@@ -285,29 +287,17 @@
           </div>
 
           <form class="form" action="#">
-            <label class="label">
-              <input
-                class="input"
-                type="text"
-                name="name"
-                placeholder="Your name"
-              />
+            <label class="label"
+              >Your name
+              <input class="input" type="text" name="name" />
             </label>
-            <label class="label">
-              <input
-                class="input"
-                type="email"
-                name="email"
-                placeholder="Email"
-              />
+            <label class="label"
+              >Email
+              <input class="input" type="email" name="email" />
             </label>
-            <label class="label">
-              <input
-                class="input"
-                type="text"
-                name="text"
-                placeholder="Tell more"
-              />
+            <label class="label"
+              >Tell more
+              <input class="input" type="text" name="text" />
             </label>
             <button class="btn req_btn" type="submit">SEND REQuest</button>
           </form>
