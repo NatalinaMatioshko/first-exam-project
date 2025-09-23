@@ -1,0 +1,22 @@
+@use "./mixins" as m;
+@use "./vars" as v;
+
+@include m.font-face(v.$font-primary, "../assets/fonts/Lato/Lato-Light", 300);
+@include m.font-face(v.$font-primary, "../assets/fonts/Lato/Lato-Regular", 400);
+@include m.font-face(
+  v.$font-primary,
+  "../assets/fonts/Lato/Lato-Semibold",
+  600
+);
+@include m.font-face(v.$font-primary, "../assets/fonts/Lato/Lato-Bold", 700);
+@include m.font-face(
+  v.$font-secondary,
+  "../assets/fonts/Playfair-Display/playfair-display.regular",
+  400
+);
+@include m.font-face(
+  v.$font-secondary,
+  "../assets/fonts/Playfair-Display/playfair-display.italic",
+  400,
+  italic
+);
