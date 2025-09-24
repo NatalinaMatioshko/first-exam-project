@@ -5,7 +5,7 @@
 @use "./fonts";
 @use "./base";
 
-.container,
+.header_cont,
 .section,
 .banner,
 .blog,
@@ -25,9 +25,9 @@
   }
 }
 
-.container {
-  max-width: v.$width_container;
-}
+// .container {
+//   max-width: v.$width_container;
+// }
 
 .header {
   position: fixed;
@@ -61,6 +61,9 @@
 
 .padding {
   padding-top: 120px;
+  &_2 {
+    padding-top: 100px;
+  }
 }
 
 .section {
@@ -74,12 +77,13 @@
     background-size: cover;
     background-position: center;
     // background-size: 1440px 993px;
-    // @media screen and (max-width: 768px) {
-    //   min-height: 530px;
-    // }
-    // @media (max-width: 320px) {
-    //   min-height: 221px;
-    // }
+    @media screen and (max-width: 768px) {
+      background-position-y: 70%;
+    }
+    @media (max-width: 320px) {
+      background-position-y: 64%;
+      background-position-x: 64%;
+    }
     @media (min-resolution: 192dpi) {
       background-image: url(../assets/img/pictures/hero_image@2x.png);
     }
@@ -272,41 +276,34 @@
 
 // <!-- =================INFO======================== -->
 
-// .cont_info {
-// position: absolute;
-//   order: 2;
-//   top: 0;
-//   left: 135px;
-// }
-// .info_container {
-//   display: flex;
-//   max-width: 400px;
-// }
-// .info_span {
-//   font-family: v.$font-secondary;
-//   font-weight: v.$main-font-weight;
-//   font-size: 68px;
-//   margin-bottom: 12px;
+.cont_info {
+  // position: absolute;
+  order: 2;
+  top: 0;
+  left: 135px;
+}
+.info_container {
+  display: flex;
+  max-width: 400px;
+}
+.info_span {
+  font-family: v.$font-secondary;
+  font-weight: v.$main-font-weight;
+  font-size: 68px;
+  margin-bottom: 12px;
 
-//   /* line-height: 72px; */
-//   line-height: 1.05882;
-//   text-align: center;
-//   color: v.$main-text-color;
-// }
-// .info_menu {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 80px;
-//   min-width: 370px;
-// }
-// ==================================
-// ==================================
-// ==================================
-// ==================================
-// ==================================
-// ==================================
-// ==================================
-// ==================================
+  /* line-height: 72px; */
+  line-height: 1.05882;
+  text-align: center;
+  color: v.$main-text-color;
+}
+.info_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  min-width: 370px;
+}
+
 // <!-- =================QUOTE======================== -->
 
 .quote_text {
@@ -402,7 +399,7 @@
   //   height: 242px;
   // }
 }
-.footer {
+.footer_menu {
   display: flex;
   justify-content: space-between;
 }
