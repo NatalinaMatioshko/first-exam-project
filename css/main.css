@@ -131,7 +131,6 @@ img {
 .section_1 {
   min-height: 100dvh;
   min-height: calc(100vh - 80px);
-  object-fit: contain;
   background-image: url(../assets/img/pictures/hero_image@1x.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -338,32 +337,58 @@ img {
 }
 
 .cont_info {
+  position: relative;
   order: 2;
-  top: 0;
-  left: 135px;
+  top: -300px;
+  left: 0;
+  display: flex;
 }
 
 .info_container {
+  background: #fff;
+  opacity: 0.9;
+  position: absolute;
   display: flex;
-  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+  top: 9%;
+  left: 400px;
 }
 
 .info_span {
   font-family: "PlayfairDisplay";
   font-weight: 400;
   font-size: 68px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   /* line-height: 72px; */
   line-height: 1.05882;
   text-align: center;
   color: #262a3f;
 }
+.info_span::before {
+  content: "";
+}
+.info_span::after {
+  content: "";
+}
 
 .info_menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 80px;
   min-width: 370px;
+}
+
+.side_1 {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.side_2 {
+  margin-top: 45px;
+  max-width: 400px;
 }
 
 .quote_text {
