@@ -5,18 +5,39 @@
 @use "./fonts";
 @use "./base";
 
-.container {
-  max-width: 1170px;
-}
-.padding {
-  padding-top: 120px;
+.container,
+.section,
+.banner,
+.blog,
+.footer {
+  padding: 0 calc(50vw - (v.$adaptive_width_container));
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 calc(50vw - calc((v.$adaptive_width_container - 12%)));
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 0 calc(50vw - calc((v.$adaptive_width_container - 27%)));
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 15px;
+  }
 }
 
 .header {
+  position: fixed;
   top: 30px;
-  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+
+  // padding-top: 42px;
+  // padding-bottom: 42px;
+
   // min-width: 1440px;
-  max-height: 80px;
+  // max-height: 80px;
   backdrop-filter: blur(9px);
   background: rgba(255, 255, 255, 0.02),
     linear-gradient(
@@ -27,43 +48,38 @@
     );
 
   &_cont {
-    font-weight: 400;
-    font-size: 14px;
-    /* line-height: 24px; */
-    line-height: 1.71429;
-    letter-spacing: 0.08em;
-    color: #262a3f;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 1.8vw;
   }
+}
+
+.padding {
+  padding-top: 120px;
 }
 
 .section {
   &_1 {
-    background: #fff;
-    min-height: 993px;
+    // min-height: 993px;
     background-image: url(../assets/img/pictures/hero_image@1x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // background-size: 1440px 993px;
     @media (min-resolution: 192dpi) {
       background-image: url(../assets/img/pictures/hero_image@2x.png);
     }
     @media (min-resolution: 288dpi) {
       background-image: url(../assets/img/pictures/hero_image@3x.png);
     }
-    background-repeat: no-repeat;
-    // background-size: cover;
-    background-position: center;
-    background-size: 1440px 993px;
   }
 }
-
-.menu {
-  display: flex;
-  justify-content: space-between;
+.hero_cont {
+  padding-top: 260px;
+  max-width: 523px;
 }
-// .title {
-//   &_1 {
-//   }
-// }
+
 .text {
   font-family: v.$font-primary;
   color: v.$main-text-color;
@@ -73,7 +89,21 @@
   line-height: 1.44444;
   opacity: 0.8;
 }
-.hero_cont {
-  padding-top: 260px;
-  max-width: 523px;
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  &__item {
+    font-weight: 400;
+    font-size: 14px;
+    /* line-height: 24px; */
+    line-height: 1.71429;
+    letter-spacing: 0.08em;
+    color: #262a3f;
+  }
 }
+// .title {
+//   &_1 {
+//   }
+// }

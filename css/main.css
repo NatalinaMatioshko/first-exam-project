@@ -69,39 +69,67 @@ img {
   max-width: 100%;
 }
 
-.container {
-  max-width: 1170px;
+.container,
+.section,
+.banner,
+.blog,
+.footer {
+  padding: 0 calc(50vw - 585px);
+}
+@media screen and (max-width: 1200px) {
+  .container,
+  .section,
+  .banner,
+  .blog,
+  .footer {
+    padding: 0 calc(50vw - (585px - 12%));
+  }
+}
+@media screen and (max-width: 992px) {
+  .container,
+  .section,
+  .banner,
+  .blog,
+  .footer {
+    padding: 0 calc(50vw - (585px - 27%));
+  }
+}
+@media screen and (max-width: 768px) {
+  .container,
+  .section,
+  .banner,
+  .blog,
+  .footer {
+    padding: 0 15px;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(9px);
+  background: rgba(255, 255, 255, 0.02), linear-gradient(269deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 51.07%, rgba(255, 255, 255, 0.5) 100%);
+}
+.header_cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.8vw;
 }
 
 .padding {
   padding-top: 120px;
 }
 
-.header {
-  top: 30px;
-  position: absolute;
-  max-height: 80px;
-  backdrop-filter: blur(9px);
-  background: rgba(255, 255, 255, 0.02), linear-gradient(269deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 51.07%, rgba(255, 255, 255, 0.5) 100%);
-}
-.header_cont {
-  font-weight: 400;
-  font-size: 14px;
-  /* line-height: 24px; */
-  line-height: 1.71429;
-  letter-spacing: 0.08em;
-  color: #262a3f;
-  display: flex;
-  justify-content: space-between;
-}
-
 .section_1 {
-  background: #fff;
-  min-height: 993px;
   background-image: url(../assets/img/pictures/hero_image@1x.png);
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  background-size: 1440px 993px;
 }
 @media (min-resolution: 192dpi) {
   .section_1 {
@@ -114,9 +142,9 @@ img {
   }
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between;
+.hero_cont {
+  padding-top: 260px;
+  max-width: 523px;
 }
 
 .text {
@@ -129,7 +157,16 @@ img {
   opacity: 0.8;
 }
 
-.hero_cont {
-  padding-top: 260px;
-  max-width: 523px;
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.menu__item {
+  font-weight: 400;
+  font-size: 14px;
+  /* line-height: 24px; */
+  line-height: 1.71429;
+  letter-spacing: 0.08em;
+  color: #262a3f;
 }/*# sourceMappingURL=main.css.map */
