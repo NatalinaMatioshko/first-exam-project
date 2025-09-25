@@ -634,6 +634,47 @@ img {
   min-width: 166px;
 }
 
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: start;
+  margin-top: 60px;
+}
+.contact_info {
+  max-width: 470px;
+}
+
+.form {
+  min-width: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid rgba(38, 42, 63, 0.1);
+  height: 32px;
+  padding: 10px;
+  outline: none;
+  padding: 5px;
+}
+.input::placeholder {
+  font-family: "PlayfairDisplay";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.11;
+  letter-spacing: 0.08em;
+  color: #262a3f;
+  opacity: 0.5;
+}
+
+.section_8 .text {
+  padding-top: 29px;
+}
+
 .footer::before {
   content: "";
   display: block;

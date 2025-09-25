@@ -590,6 +590,44 @@
 }
 // <!-- =================CONTACT=============
 
+.contact {
+  @include m.flex(space-between);
+  align-items: start;
+  margin-top: 60px;
+  &_info {
+    max-width: 470px;
+  }
+}
+.form {
+  min-width: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.input {
+  border: none;
+  border-bottom: 1px solid rgba(v.$main-text-color, 0.1);
+  height: 32px;
+  // width: 100%;
+  padding: 10px;
+  outline: none;
+  padding: 5px;
+
+  &::placeholder {
+    font-family: v.$font-secondary;
+    font-style: italic;
+    font-weight: v.$main-font-weight;
+    font-size: v.$main-font-size;
+    line-height: 1.11;
+    letter-spacing: 0.08em;
+    color: v.$main-text-color;
+    opacity: 0.5;
+  }
+}
+.section_8 .text {
+  padding-top: 29px;
+}
+
 // <!-- =================footer======================== -->
 
 .footer::before {
