@@ -137,11 +137,12 @@ img {
   gap: 1.8vw;
 }
 
-.padding {
-  padding-top: 120px;
+.margin {
+  margin-top: 120px;
 }
-.padding_2 {
-  padding-top: 100px;
+
+.margin_2 {
+  margin-top: 100px;
 }
 
 .section_1 {
@@ -171,35 +172,6 @@ img {
 @media (min-resolution: 288dpi) {
   .section_1 {
     background-image: url(../assets/img/pictures/hero_image@3x.png);
-  }
-}
-@media screen and (max-width: 992px) {
-  .section_1 {
-    min-height: 993px;
-  }
-}
-.section_2 {
-  position: relative;
-}
-.section_4 {
-  background-image: url(../assets/img/pictures/quote_bg@1x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-@media (min-resolution: 192dpi) {
-  .section_4 {
-    background-image: url(../assets/img/pictures/quote_bg@2x.jpg);
-  }
-}
-@media (min-resolution: 288dpi) {
-  .section_4 {
-    background-image: url(../assets/img/pictures/quote_bg@3x.jpg);
-  }
-}
-@media screen and (max-width: 992px) {
-  .section_4 {
-    min-height: 993px;
   }
 }
 
@@ -344,14 +316,6 @@ img {
   font-style: italic;
   color: #85bbb1;
 }
-.title_span {
-  font-style: italic;
-  font-size: 20px;
-  /* line-height: 20px; */
-  line-height: 1;
-  letter-spacing: 0.08em;
-  color: #fff;
-}
 
 .cont_info {
   position: relative;
@@ -405,7 +369,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.5px solid #85bbb1;
+  border-top: 1px solid #85bbb1;
   width: 100px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -415,22 +379,152 @@ img {
   max-width: 400px;
 }
 
+.benefit_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 80px;
+}
+@media screen and (max-width: 768px) {
+  .benefit_grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wrapper::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #e4e4e4;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.quote_cont {
+  max-width: 1170px;
+  min-height: 400px;
+  isolation: isolate;
+  background-image: url(../assets/img/pictures/quote_bg@1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: contain;
+  padding-top: 100px;
+  padding-left: 160px;
+}
+@media (min-resolution: 192dpi) {
+  .quote_cont {
+    background-image: url(../assets/img/pictures/quote_bg@2x.jpg);
+  }
+}
+@media (min-resolution: 288dpi) {
+  .quote_cont {
+    background-image: url(../assets/img/pictures/quote_bg@3x.jpg);
+  }
+}
+
 .quote_text {
+  position: relative;
+  max-width: 710px;
   font-family: "Lato";
   font-weight: 400;
+  color: #fff;
   font-size: 32px;
   /* line-height: 46px; */
   line-height: 1.4375;
   letter-spacing: 0.04em;
-  color: #fff;
+  margin-bottom: 40px;
 }
+.quote_text::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: -7px;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 81px;
+  background-image: url(../assets/img/icons/quote.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
 .quote_text_small {
+  font-family: "PlayfairDisplay";
+  color: #fff;
+  font-style: italic;
+  font-size: 20px;
+  /* line-height: 20px; */
+  line-height: 1;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+}
+
+.section_7 .text {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  max-width: 400px;
+}
+
+.rev_cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.rev_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 370px;
+  height: 340px;
+  padding: 30px 40px;
+  position: relative;
+  isolation: isolate;
+  background: rgba(25, 28, 41, 0.6);
+}
+.rev_card_1 {
+  background-image: url(../assets/img/pictures/review_1@1x.jpg);
+}
+.rev_card_2 {
+  background-image: url(../assets/img/pictures/review_2@1x.jpg);
+}
+.rev_card_3 {
+  background-image: url(../assets/img/pictures/review_3@1x.jpg);
+}
+.rev_card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  border-radius: 8px;
+}
+
+.text_rev {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  /* line-height: 26px; */
+  line-height: 1.625;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.title_span {
   font-family: "PlayfairDisplay";
   font-style: italic;
   font-size: 20px;
   /* line-height: 20px; */
   line-height: 1;
   letter-spacing: 0.08em;
+  color: #fff;
 }
 
 .video_player {
