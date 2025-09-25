@@ -1,5 +1,18 @@
-%flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@use "vars" as v;
+
+%button-base {
+  font-family: v.$font-primary;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: v.$accent-text-color;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 50px;
+  min-width: 115px;
 }

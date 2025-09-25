@@ -1,3 +1,19 @@
+.btn {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f1897b;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 50px;
+  min-width: 115px;
+}
+
 @font-face {
   font-family: "Lato";
   src: url("../assets/fonts/Lato/Lato-Light.woff2") format("woff2"), url("../assets/fonts/Lato/Lato-Light.woff") format("woff");
@@ -195,7 +211,8 @@ img {
 .menu {
   display: flex;
   gap: 2.3vw;
-  padding: 0 30px;
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 @media screen and (max-width: 992px) {
   .menu {
@@ -353,6 +370,8 @@ img {
   align-items: center;
   top: 9%;
   left: 400px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 .info_span {
@@ -365,29 +384,34 @@ img {
   text-align: center;
   color: #262a3f;
 }
-.info_span::before {
-  content: "";
-}
-.info_span::after {
-  content: "";
-}
 
 .info_menu {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 80px;
   min-width: 370px;
 }
+.info_menu_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-.side_1 {
-  padding-top: 45px;
-  padding-bottom: 45px;
+.info_menu_item:not(:last-child)::after {
+  content: "";
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid #85bbb1;
+  width: 100px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .side_2 {
-  margin-top: 45px;
   max-width: 400px;
 }
 
@@ -460,11 +484,15 @@ img {
   margin-left: 4px;
 }
 
-.video img {
+.video {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 5px;
+}
+
+.btn {
+  padding: 15px 30px;
 }
 
 .footer_menu {
