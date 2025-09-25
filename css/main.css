@@ -318,6 +318,7 @@ img {
   font-size: 24px;
   /* line-height: 48px; */
   line-height: 2;
+  margin-bottom: 15px;
 }
 .title_italic {
   font-style: italic;
@@ -592,46 +593,31 @@ img {
   border-radius: 5px;
 }
 
-.btn {
-  padding: 15px 5px;
+.cont_promise {
   position: relative;
+  display: flex;
+  align-items: center;
 }
-.btn > * {
-  position: relative;
-  z-index: 1;
+
+.promis_img {
+  flex-shrink: 0;
+  width: 600px;
+  display: block;
+  height: auto;
 }
-.btn::after {
-  content: "";
-  display: inline-block;
+
+.side {
   position: absolute;
-  left: 15px;
-  bottom: 11px;
-  width: 90%;
-  height: 13px;
-  background: #f1897b;
-  opacity: 0.3;
-  z-index: 0;
-}
-.btn:hover,
-.btn :focus {
-  color: #e54f3a;
-}
-.btn::after:hover,
-.btn focus {
-  background: #e54f3a;
-}
-.btn_info {
-  min-width: 175px;
-}
-.btn_prom {
-  border: 1px solid #e4e4e4;
-}
-.btn_prom:hover,
-.btn focus {
-  border: 1px solid #e54f3a;
-}
-.btn_cont {
-  min-width: 166px;
+  right: 0;
+  display: grid;
+  grid-template-columns: 300px auto;
+  align-content: start;
+  gap: 70px 100px;
+  background: #fff;
+  opacity: 0.9;
+  padding: 75px;
+  padding-left: 70px;
+  padding-right: 0;
 }
 
 .contact {
@@ -723,4 +709,61 @@ img {
 
 .footer li a:hover {
   color: #f1897b;
+}
+
+.btn {
+  padding: 15px 5px;
+  position: relative;
+}
+.btn > * {
+  position: relative;
+  z-index: 1;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  bottom: 11px;
+  width: 90%;
+  height: 13px;
+  background: #f1897b;
+  opacity: 0.3;
+  z-index: 0;
+}
+.btn:hover,
+.btn :focus {
+  color: #e54f3a;
+}
+.btn::after:hover,
+.btn focus {
+  background: #e54f3a;
+}
+.btn_info {
+  min-width: 175px;
+}
+.btn_prom {
+  border: 1px solid #e4e4e4;
+  width: 300px;
+  height: 90px;
+  padding: 35px 90px;
+}
+.btn_prom::after {
+  width: 112px;
+  left: 102px;
+  bottom: 30px;
+}
+.btn_prom:hover,
+.btn focus {
+  border: 1px solid #e54f3a;
+}
+.btn_cont {
+  min-width: 166px;
+  align-self: self-start;
+  margin-top: 0;
+}
+.btn_cont::after {
+  width: 163px;
+  left: 14px;
+  bottom: 11px;
 }/*# sourceMappingURL=main.css.map */
