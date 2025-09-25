@@ -403,6 +403,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  max-width: 482px;
 }
 
 .wrapper::before {
@@ -535,6 +536,16 @@ img {
   color: #fff;
 }
 
+.cont_video {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+.section_5 .title_2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
 .video_player {
   position: relative;
   max-width: 970px;
@@ -545,7 +556,6 @@ img {
   padding-left: 30px;
   padding-right: 70px;
   border-radius: 32px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 100%;
   opacity: 0.8;
@@ -582,8 +592,8 @@ img {
   transform: translate(-50%, -50%);
   width: 70px;
   height: 70px;
-  background-color: rgba(74, 144, 226, 0.8);
-  background-color: #586291;
+  background-color: transparent;
+  border: 1px solid #262a3f;
   border-radius: 50%;
   border: none;
   cursor: pointer;
