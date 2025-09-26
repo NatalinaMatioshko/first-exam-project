@@ -371,6 +371,13 @@ img {
   flex-direction: column;
 }
 
+.stat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .info_menu_item:not(:last-child)::after {
   content: "";
   display: block;
@@ -381,6 +388,11 @@ img {
   width: 100px;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.info_icon {
+  width: 18px;
+  height: 51px;
 }
 
 .side_2 {
@@ -763,8 +775,7 @@ img {
 .btn :focus {
   color: #e54f3a;
 }
-.btn::after:hover,
-.btn focus {
+.btn:hover::after, .btn:focus::after {
   background: #e54f3a;
 }
 .btn_info {
