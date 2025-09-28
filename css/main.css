@@ -140,6 +140,11 @@ img {
   align-items: center;
   gap: 1.8vw;
 }
+@media screen and (max-width: 992px) {
+  .header {
+    position: absolute;
+  }
+}
 
 .margin {
   margin-top: 120px;
@@ -238,6 +243,27 @@ img {
     text-align: center;
     padding: 10px 0;
     border: 1px solid #e5d9d9;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .menu__item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .menu__item:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .menu__item:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  .menu__item:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  .menu__item:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  .menu__item:nth-child(6) {
+    transition-delay: 0.6s;
   }
 }
 .menu__link {
@@ -314,30 +340,6 @@ img {
   .burger__img::after {
     top: -10px;
   }
-}
-
-.menu__item {
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.menu__item:nth-child(1) {
-  transition-delay: 0.1s;
-}
-.menu__item:nth-child(2) {
-  transition-delay: 0.2s;
-}
-.menu__item:nth-child(3) {
-  transition-delay: 0.3s;
-}
-.menu__item:nth-child(4) {
-  transition-delay: 0.4s;
-}
-.menu__item:nth-child(5) {
-  transition-delay: 0.5s;
-}
-.menu__item:nth-child(6) {
-  transition-delay: 0.6s;
 }
 
 .burger:checked ~ .menu .menu__item {
@@ -771,12 +773,24 @@ img {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 992px) {
+  .cont_promise {
+    flex-direction: column;
+  }
+}
 
 .promis_img {
   flex-shrink: 0;
   width: 600px;
   display: block;
   height: auto;
+}
+@media screen and (max-width: 992px) {
+  .promis_img {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .side {
@@ -791,6 +805,39 @@ img {
   padding: 75px;
   padding-left: 70px;
   padding-right: 0;
+}
+@media screen and (max-width: 992px) {
+  .side {
+    background-image: url(../assets/img/pictures/promises_bg@1x.jpg);
+    color: #fff;
+    position: static;
+    width: 100%;
+    opacity: 1;
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section_6 .text {
+    color: #fff;
+  }
+  .section_6 .title_3 {
+    color: #fff;
+  }
+  .section_6 .btn {
+    color: #85bbb1;
+  }
+  .section_6 .btn::after {
+    background: #85bbb1;
+  }
+}
+@media screen and (max-width: 375px) {
+  .section_6 .btn {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .contact {
