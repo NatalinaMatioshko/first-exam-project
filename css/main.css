@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .btn {
   font-family: "Lato";
   font-weight: 700;
@@ -170,6 +171,21 @@ img {
   .section_1 {
     background-position-y: 64%;
     background-position-x: 64%;
+  }
+}
+.section_2 {
+  position: relative;
+  z-index: 10; /* щоб завжди бути поверх hero */
+  margin-top: -150px; /* наскільки сильно блок заходить на hero */
+}
+@media screen and (max-width: 992px) {
+  .section_2 {
+    margin-top: -100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section_2 {
+    margin-top: -50px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -408,13 +424,18 @@ img {
 }
 @media screen and (max-width: 992px) {
   .info_container {
-    background-image: url(../assets/img/);
     position: static;
     flex-direction: column;
     width: 100%;
     top: auto;
     right: auto;
     padding: 30px 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .info_img {
+    display: none;
   }
 }
 

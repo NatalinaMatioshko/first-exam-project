@@ -106,6 +106,20 @@
     // }
   }
 
+  &_2 {
+    position: relative;
+    z-index: 10; /* щоб завжди бути поверх hero */
+    margin-top: -150px; /* наскільки сильно блок заходить на hero */
+
+    @media screen and (max-width: 992px) {
+      margin-top: -100px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: -50px;
+    }
+  }
+
   &_7 {
     @media screen and (max-width: v.$sm) {
       display: flex;
@@ -355,13 +369,19 @@
   padding-bottom: 45px;
 
   @media screen and (max-width: 992px) {
-    background-image: url(../assets/img/);
+    // background-image: url(../assets/img/pictures/info_img@1x.jpg);
     position: static;
+    // opacity: 0.5;
     flex-direction: column;
     width: 100%;
     top: auto;
     right: auto;
     padding: 30px 15px;
+  }
+}
+.info_img {
+  @media screen and (max-width: 992px) {
+    display: none;
   }
 }
 
