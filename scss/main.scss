@@ -58,11 +58,17 @@
   width: 100%;
   z-index: 100;
 
-  // min-width: 1440px;
-  // max-height: 80px;
-  backdrop-filter: var(--background-filter);
+  backdrop-filter: blur(9px);
+  background: rgba(255, 255, 255, 0.02),
+    linear-gradient(
+      269deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 51.07%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
 
-  background: var(--background-header);
+  // backdrop-filter: var(--background-filter);
+  // background: var(--background-header);
 
   &_cont {
     display: flex;
@@ -85,14 +91,9 @@
 .section {
   &_1 {
     min-height: 1028px;
-    // min-height: 100vh;
-    // min-height: calc(100vh - 80px);
-    // object-fit: contain;
-    // background-image: url(../assets/img/pictures/hero_image@1x.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    // background-size: 1440px 993px;
     // background-image: image-set(
     //   url("../assets/img/pictures/hero_image@1x.png") 1x,
     //   url("../assets/img/pictures/hero_image@2x.png") 2x,
@@ -160,7 +161,6 @@
 .hero_cont {
   padding-top: 260px;
   max-width: 523px;
-  // margin: 0 auto;
   @media screen and (max-width: 768px) {
     padding-top: 150px;
     max-width: 100%;
@@ -184,7 +184,7 @@
 .menu {
   display: flex;
   gap: 2.3vw;
-  // padding: 0 30px;
+
   padding-top: 28px;
   padding-bottom: 28px;
 
@@ -362,8 +362,6 @@
 .cont_info {
   position: relative;
   order: 2;
-  // top: -300px;
-  // bottom: ;
   left: 0;
   display: flex;
   @media screen and (max-width: 992px) {
@@ -384,9 +382,8 @@
   padding-bottom: 45px;
 
   @media screen and (max-width: 992px) {
-    // background-image: url(../assets/img/pictures/info_img@1x.jpg);
     position: static;
-    // opacity: 0.5;
+
     flex-direction: column;
     width: 100%;
     top: auto;
@@ -448,10 +445,6 @@
   width: 100px;
   margin-top: 40px;
   margin-bottom: 40px;
-
-  // @media screen and (min-width: 576px) and (max-width: v.$lg) {
-  //   display: none;
-  // }
 }
 .info_menu_item::after {
   @media screen and (max-width: v.$lg) {
@@ -478,7 +471,6 @@
   }
 }
 
-// <!-- =================benefit======================== -->
 .benefit_grid {
   display: grid;
 
@@ -495,9 +487,6 @@
   flex-direction: column;
   gap: 30px;
   max-width: 482px;
-
-  // padding-top: 20px 30px;
-  // margin-bottom: 60px;
 }
 .wrapper::before {
   content: "";
@@ -509,13 +498,11 @@
   margin-bottom: 40px;
 }
 
-// <!-- =================QUOTE======================== -->
 .quote_cont {
   max-width: 1170px;
   min-height: 400px;
   width: 100%;
   isolation: isolate;
-  // background-image: url(../assets/img/pictures/quote_bg@1x.jpg);
 
   width: calc(100% - 32px);
   height: 100%;
@@ -525,13 +512,6 @@
   background-position: center;
   padding-top: 100px;
   padding-left: 160px;
-
-  // @media (min-resolution: 192dpi) {
-  //   background-image: url(../assets/img/pictures/quote_bg@2x.jpg);
-  // }
-  // @media (min-resolution: 288dpi) {
-  //   background-image: url(../assets/img/pictures/quote_bg@3x.jpg);
-  // }
 
   background-image: image-set(
     url("../assets/img/pictures/quote_bg@1x.jpg") 1x,
@@ -602,27 +582,17 @@
     text-align: center;
   }
 }
-// <!-- =================REVIEWS======================== -->
 .section_7 .text {
   margin-top: 20px;
   margin-bottom: 50px;
   max-width: 400px;
-
-  // @media screen and (max-width: v.$xl) {
-  //   margin-left: 64px;
-  // }
 }
-// .section_7 .title_2 {
-//   margin-left: 64px;
-// }
 
 .rev_cards {
   @include m.flex(center);
   gap: 30px;
   flex-wrap: wrap;
-  // @media screen and (max-width: v.$xl) {
-  //   flex-wrap: wrap;
-  // }
+
   @media screen and (min-width: 1200px) {
     @include m.flex(space-between);
     gap: 0;
@@ -660,7 +630,7 @@
   &::before {
     content: "";
     position: absolute;
-    inset: 0; // Розтягує на всю картку
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: -1;
     border-radius: 8px;
@@ -686,7 +656,6 @@
   color: v.$second-text-color;
 }
 
-// <!-- =================VIDEO=============
 .cont_video {
   max-width: 970px;
   margin: 0 auto;
@@ -699,7 +668,6 @@
   position: relative;
   max-width: 970px;
   margin: 0 auto;
-  // background-color: #f5f5f7;
   background-color: transparent;
   padding-top: 31px;
   padding-bottom: 31px;
@@ -745,8 +713,6 @@
     transform: translate(-50%, -50%);
     width: 70px;
     height: 70px;
-    // background-color: rgba(74, 144, 226, 0.8);
-    // background-color: #586291;
     background-color: transparent;
     border: 1px solid #262a3f;
 
@@ -757,8 +723,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // width: 120px;
-    // height: 120px;
 
     transition: background-color 0.3s ease, transform 0.3s ease;
 
@@ -793,18 +757,7 @@
   width: 100%;
   height: auto;
   border-radius: 5px;
-
-  // max-width: 870px;
-  // @media screen and (max-width: 992px) {
-  //   width: 768px;
-  //   height: 476px;
-  // }
-  // @media screen and (max-width: 390px) {
-  //   width: 390px;
-  //   height: 242px;
-  // }
 }
-// <!-- =================PROMISES======================== -->
 .cont_promise {
   position: relative;
   display: flex;
@@ -817,7 +770,6 @@
   flex-shrink: 0;
   width: 600px;
   display: block;
-  // width: 100%;
   height: auto;
   @media screen and (max-width: 992px) {
     display: none;
@@ -832,10 +784,8 @@
   grid-template-columns: 300px auto;
   align-content: start;
   gap: 70px 100px;
-  // width: 770px;
-  // height: 450px;
+
   background: #fff;
-  // margin-left: -150px;
   opacity: 0.9;
   padding: 75px;
   padding-left: 70px;
@@ -874,7 +824,6 @@
     padding: 0;
   }
 }
-// ================CONTACT=============
 
 .contact {
   @include m.flex(space-between);
@@ -903,7 +852,6 @@
   border: none;
   border-bottom: 1px solid rgba(v.$main-text-color, 0.1);
   height: 32px;
-  // width: 100%;
   padding: 10px;
   outline: none;
   padding: 5px;
@@ -922,8 +870,6 @@
 .section_8 .text {
   padding-top: 29px;
 }
-
-// <!-- =================footer======================== -->
 
 .footer::before {
   content: "";
@@ -974,7 +920,6 @@
 .footer li a:hover {
   color: v.$accent-text-color;
 }
-// / <!-- =================btn======================== -- >
 
 .btn {
   @extend %button-base;
@@ -1033,8 +978,6 @@
     }
   }
 }
-
-// / <!-- =================ANIMATION======================== -- >
 
 .info_menu_item {
   .info_span {

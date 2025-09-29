@@ -1,5 +1,24 @@
 :root {
-  --main-text-color: #fff;
+  --background-main: #fff;
+  --background-secondary: #fff;
+  --font-color-menu: #262a3f;
+  --font-color-menu-hover: #;
+  --main-text-color: #262a3f;
+  --second-color: #fff;
+  --italic-text-color: #85bbb1;
+  --accent-text-color: #f1897b;
+  --line-border: 1px solid #e4e4e4;
+  --pseudo-line: 1px solid #85bbb1;
+  --background-first-screen: url(../assets/img/pictures/hero_image@2x.png);
+  --quote: url(../assets/img/icons/quote.svg);
+  --backdrop-filter: blur(9px);
+  --background-header: rgba(255, 255, 255, 0.02),
+    linear-gradient(
+      269deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 51.07%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
 }
 
 .btn {
@@ -72,6 +91,7 @@ html,
 body {
   font-family: "Lato";
   min-height: 100dvh;
+  background-color: var(--second-color);
 }
 
 ul,
@@ -108,14 +128,6 @@ img {
     background-position: 250px 0;
   }
 }
-.hidden {
-  display: none;
-}
-
-body {
-  color: var(--main-text-color);
-}
-
 .header_cont,
 .section,
 .banner,
@@ -149,6 +161,20 @@ body {
   .footer {
     padding: 0 15px;
   }
+}
+
+.bb8-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  padding: 6px 8px;
+  background: #95dee0;
+  user-select: none;
+}
+
+.bb8-toggle__checkbox {
+  display: none;
 }
 
 .header {
@@ -186,7 +212,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: image-set(url("../assets/img/pictures/hero_image@1x.png") 1x, url("../assets/img/pictures/hero_image@2x.png") 2x, url("../assets/img/pictures/hero_image@3x.png") 3x);
+  background-image: var(--background-first-screen);
 }
 @media screen and (max-width: 1200px) {
   .section_1 {
