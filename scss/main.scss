@@ -108,8 +108,8 @@
 
   &_2 {
     position: relative;
-    z-index: 10; /* щоб завжди бути поверх hero */
-    margin-top: -150px; /* наскільки сильно блок заходить на hero */
+    z-index: 10;
+    margin-top: -150px;
 
     @media screen and (max-width: 992px) {
       margin-top: -100px;
@@ -144,8 +144,7 @@
 .hero_cont {
   padding-top: 260px;
   max-width: 523px;
-  margin: 0 auto;
-
+  // margin: 0 auto;
   @media screen and (max-width: 768px) {
     padding-top: 150px;
     max-width: 100%;
@@ -608,6 +607,10 @@
   // @media screen and (max-width: v.$xl) {
   //   flex-wrap: wrap;
   // }
+  @media screen and (min-width: 1200px) {
+    @include m.flex(space-between);
+    gap: 0;
+  }
 }
 .rev_card {
   display: flex;
@@ -1016,25 +1019,32 @@
 }
 
 // / <!-- =================ANIMATION======================== -- >
-// .hero_cont {
-//   opacity: 0;
-//   transform: translateY(50px);
-//   animation: fadeUp 1s ease-out forwards;
-//   animation-delay: 0.3s;
-// }
 
-// @keyframes fadeUp {
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
+.info_menu_item {
+  .info_span {
+    transition: transform 0.3s ease;
+  }
 
-// .btn {
-//   transition: transform 0.3s ease, background-color 0.3s ease;
+  &:hover .info_span {
+    animation: scaleText 1.2s cubic-bezier(0.25, 0.3, 0.25, 1) infinite
+      alternate;
+  }
+}
 
-//   &:hover {
-//     transform: scale(1.05);
-//     background-color: rgba(229, 79, 58, 0.8);
-//   }
-// }
+.title_italic {
+  text-transform: none;
+
+  background: -webkit-linear-gradient(
+    150deg,
+    #85bbb1 15%,
+    #08332b 28%,
+    #85bbb1 48%,
+    #85bbb1 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  background-clip: text;
+  background-size: 250px;
+  -webkit-animation: gradient 5s linear infinite;
+  animation: gradient 5s linear infinite;
+}
