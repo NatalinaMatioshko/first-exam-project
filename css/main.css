@@ -1,3 +1,7 @@
+:root {
+  --main-text-color: #fff;
+}
+
 .btn {
   font-family: "Lato";
   font-weight: 700;
@@ -85,8 +89,31 @@ img {
   max-width: 100%;
 }
 
+@keyframes scaleText {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.24);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: -250px 0;
+  }
+  100% {
+    background-position: 250px 0;
+  }
+}
 .hidden {
   display: none;
+}
+
+body {
+  color: var(--main-text-color);
 }
 
 .header_cont,
@@ -155,18 +182,29 @@ img {
 }
 
 .section_1 {
-  min-height: 100dvh;
+  min-height: 1028px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-image: image-set(url("../assets/img/pictures/hero_image@1x.png") 1x, url("../assets/img/pictures/hero_image@2x.png") 2x, url("../assets/img/pictures/hero_image@3x.png") 3x);
 }
+@media screen and (max-width: 1200px) {
+  .section_1 {
+    min-height: 800px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .section_1 {
+    min-height: 700px;
+  }
+}
 @media screen and (max-width: 768px) {
   .section_1 {
+    min-height: 650px;
     background-position-y: 70%;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 576px) {
   .section_1 {
     background-position-y: 64%;
     background-position-x: 64%;
@@ -175,16 +213,21 @@ img {
 .section_2 {
   position: relative;
   z-index: 10;
-  margin-top: -150px;
+  margin-top: -260px;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .section_2 {
     margin-top: -100px;
   }
 }
+@media screen and (max-width: 992px) {
+  .section_2 {
+    margin-top: 100px;
+  }
+}
 @media screen and (max-width: 768px) {
   .section_2 {
-    margin-top: -50px;
+    margin-top: 180px;
   }
 }
 @media screen and (max-width: 576px) {

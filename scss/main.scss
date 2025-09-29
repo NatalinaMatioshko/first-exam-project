@@ -4,9 +4,13 @@
 @use "./mixins" as m;
 @use "./fonts";
 @use "./base";
+@use "./keyframes";
 
 .hidden {
   display: none;
+}
+body {
+  color: var(--main-text-color);
 }
 
 .header_cont,
@@ -72,8 +76,8 @@
 
 .section {
   &_1 {
-    // min-height: 993px;
-    min-height: 100dvh;
+    min-height: 1028px;
+    // min-height: 100vh;
     // min-height: calc(100vh - 80px);
     // object-fit: contain;
     // background-image: url(../assets/img/pictures/hero_image@1x.png);
@@ -87,36 +91,38 @@
       url("../assets/img/pictures/hero_image@3x.png") 3x
     );
 
-    @media screen and (max-width: v.$md) {
+    @media screen and (max-width: 1200px) {
+      min-height: 800px;
+    }
+
+    @media screen and (max-width: 992px) {
+      min-height: 700px;
+    }
+
+    @media screen and (max-width: 768px) {
+      min-height: 650px;
       background-position-y: 70%;
     }
-    @media (max-width: v.$xs) {
+    @media (max-width: v.$sm) {
       background-position-y: 64%;
       background-position-x: 64%;
     }
-    // @media (min-resolution: 192dpi) {
-    //   background-image: url(../assets/img/pictures/hero_image@2x.png);
-    // }
-    // @media (min-resolution: 288dpi) {
-    //   background-image: url(../assets/img/pictures/hero_image@3x.png);
-    // }
-
-    // @media screen and (max-width: 992px) {
-    //   min-height: 993px;
-    // }
   }
 
   &_2 {
     position: relative;
     z-index: 10;
-    margin-top: -150px;
+    margin-top: -260px;
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1200px) {
       margin-top: -100px;
+    }
+    @media screen and (max-width: 992px) {
+      margin-top: 100px;
     }
 
     @media screen and (max-width: 768px) {
-      margin-top: -50px;
+      margin-top: 180px;
     }
   }
 
