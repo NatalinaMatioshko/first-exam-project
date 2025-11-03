@@ -212,6 +212,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: image-set(url("../assets/img/pictures/hero_image@1x.png") 1x, url("../assets/img/pictures/hero_image@2x.png") 2x, url("../assets/img/pictures/hero_image@3x.png") 3x);
   background-image: var(--background-first-screen);
 }
 @media screen and (max-width: 1200px) {
@@ -839,28 +840,6 @@ img {
   transform: translateY(-50%);
   width: 13px;
   height: 13px;
-}
-.video_player__play_btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  background-color: transparent;
-  border: 1px solid #262a3f;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  opacity: 0.3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.video_player__play_btn:hover {
-  background-color: rgb(74, 144, 226);
-  transform: translate(-50%, -50%) scale(1.1);
 }
 .video_player__play_icon {
   stroke: #262a3f;
